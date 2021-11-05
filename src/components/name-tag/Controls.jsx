@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Controls = ({ personNameChange,
+const Controls = ({ 
+  personName,
+  greetingMessage,
+  personNameChange,
   greetingMessageChange,
-  onSubmit }) => {
+}) => {
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <label htmlFor="greeting">Greeting</label>
       <input
         id="greeting"
         name="greeting"
+        value={greetingMessage}
         type="text"
         onChange={greetingMessageChange}
       />
@@ -17,6 +21,7 @@ const Controls = ({ personNameChange,
       <input
         id="name"
         name="name"
+        value={personName}
         type="text"
         onChange={personNameChange}
       />
@@ -26,7 +31,9 @@ const Controls = ({ personNameChange,
 
 Controls.propTypes = { personNameChange:PropTypes.func.isRequired,
   greetingMessageChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  greetingMessage: PropTypes.string.isRequired,
+  personName: PropTypes.string.isRequired,
+  
 };
 
 export default Controls;
