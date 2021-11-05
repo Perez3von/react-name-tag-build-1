@@ -29,10 +29,10 @@ const Controls = ({
   );
 };
 
-Controls.propTypes = { personNameChange:PropTypes.func.isRequired,
-  greetingMessageChange: PropTypes.func.isRequired,
-  greetingMessage: PropTypes.string.isRequired,
-  personName: PropTypes.string.isRequired,
+Controls.propTypes = { personNameChange:PropTypes.func,
+  greetingMessageChange: PropTypes.func,
+  greetingMessage: PropTypes.string,
+  personName: PropTypes.string,
   
 };
 

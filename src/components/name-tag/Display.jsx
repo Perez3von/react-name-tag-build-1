@@ -13,8 +13,8 @@ const Display = ({ personName,
   );
 };
 Display.propTypes = {
-  personName: PropTypes.string.isRequired,
-  greetingMessage: PropTypes.string.isRequired,
+  personName: PropTypes.string,
+  greetingMessage: PropTypes.string,
 
 
 };
